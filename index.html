@@ -8,17 +8,20 @@
 </head>
 <body>
     
-
-
-
-    <script>  
-            
-        const ws = new WebSocket("ws://localhost:8501");
-        ws.addEventListener("open", () => {
-            console.log("Connected To The Server");
-        });
-
-        
+    
+    
+    
+    <script>
+        const ws = new WebSocket("ws://localhost:8080");
+        ws.onmessage = message => console.log("We have recieved a message from server ${message.utf8Data}");
+    
+    
+    
+    
+    
     </script>
+
+
+
 </body>
 </html>
